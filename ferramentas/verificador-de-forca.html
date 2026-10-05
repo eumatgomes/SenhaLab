@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+
+    <link rel="icon" type="image/png" href="/assets/images/S.png">
+    <title>Verificador de Força de Senha | SenhaLab</title>
+
+    <meta
+        name="description"
+        content="Verifique a força de uma senha diretamente no navegador. A análise é feita localmente e o SenhaLab não recebe nem armazena sua senha."
+    >
+
+    <link
+        rel="canonical"
+        href="https://senhalab.com.br/ferramentas/verificador-de-forca.html"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/assets/css/style.css?v=20261001"
+    >
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="container header-inner">
+
+        <a class="brand" href="/">
+            <span class="brand-mark">S</span>SenhaLab
+        </a>
+
+        <nav class="nav">
+
+            <a href="/">
+                Início
+            </a>
+
+            <a class="active" href="/ferramentas.html">
+                Ferramentas
+            </a>
+
+            <a href="/artigos.html">
+                Artigos
+            </a>
+
+            <a href="/sobre.html">
+                Sobre
+            </a>
+
+        </nav>
+
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Abrir menu"
+        >
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+<main>
+
+    <section class="page-hero">
+
+        <div class="container">
+
+            <div class="breadcrumb">
+
+                <a href="/">
+                    Início
+                </a>
+
+                /
+
+                <a href="/ferramentas.html">
+                    Ferramentas
+                </a>
+
+                / Verificador de força
+
+            </div>
+
+            <span class="eyebrow">
+                Segurança digital
+            </span>
+
+            <h1>
+                Verificador de força de senha
+            </h1>
+
+            <p class="lead">
+                Descubra se uma senha possui características de uma senha forte,
+                com uma análise feita diretamente no seu navegador.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="password-checker">
+
+                <div class="privacy-box">
+
+                    <div class="privacy-icon">
+                        🔒
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Sua senha não é enviada para nós
+                        </strong>
+
+                        <p>
+                            A análise acontece inteiramente no seu navegador.
+                            O SenhaLab não precisa receber, armazenar ou acessar
+                            a senha digitada nesta ferramenta.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="checker-card">
+
+                    <div class="checker-label">
+                        <label for="passwordCheckerInput">
+                            Digite uma senha para analisar
+                        </label>
+                    </div>
+
+                    <div class="password-checker-input">
+
+                        <input
+                            id="passwordCheckerInput"
+                            type="password"
+                            autocomplete="off"
+                            autocapitalize="none"
+                            spellcheck="false"
+                            placeholder="Digite uma senha..."
+                            aria-label="Senha para análise"
+                        >
+
+                        <button
+                            id="togglePasswordVisibility"
+                            type="button"
+                            class="password-eye"
+                            aria-label="Mostrar senha"
+                        >
+                            👁
+                        </button>
+
+                    </div>
+
+                    <p class="checker-warning">
+                        Para maior segurança, evite digitar aqui uma senha que
+                        você esteja usando atualmente em uma conta importante.
+                    </p>
+
+                    <div class="strength-result">
+
+                        <div class="strength-result-top">
+
+                            <span>
+                                Força estimada
+                            </span>
+
+                            <strong id="passwordStrengthLabel">
+                                Digite uma senha
+                            </strong>
+
+                        </div>
+
+                        <div class="strength-result-bar">
+
+                            <div
+                                id="passwordStrengthFill"
+                                class="strength-result-fill"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        id="passwordAnalysis"
+                        class="password-analysis"
+                    >
+
+                        <div class="analysis-item pending">
+
+                            <span class="analysis-icon">
+                                •
+                            </span>
+
+                            <span>
+                                Digite uma senha para iniciar a análise.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="checker-actions">
+
+                        <button
+                        id="checkPassword"
+                        type="button"
+                        class="btn btn-primary"
+                        >
+                            Verificar senha comprometida
+                        </button>
+
+                        <button
+                            id="clearPasswordChecker"
+                            type="button"
+                            class="btn btn-secondary"
+                        >
+                            Limpar
+                        </button>
+
+                        <a
+                            href="/#gerador"
+                            class="btn btn-secondary"
+                        >
+                            Gerar uma senha forte
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="checker-info">
+
+                    <div class="card">
+
+                        <div class="icon">
+                            🔎
+                        </div>
+
+                        <h3>
+                            O que analisamos?
+                        </h3>
+
+                        <p>
+                            A ferramenta verifica características que
+                            normalmente contribuem para uma senha mais
+                            resistente a tentativas de descoberta.
+                        </p>
+
+                        <ul class="checker-list">
+
+                            <li>
+                                Comprimento da senha
+                            </li>
+
+                            <li>
+                                Letras maiúsculas
+                            </li>
+
+                            <li>
+                                Letras minúsculas
+                            </li>
+
+                            <li>
+                                Números
+                            </li>
+
+                            <li>
+                                Símbolos
+                            </li>
+
+                            <li>
+                                Repetições e sequências simples
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <div class="card">
+
+                        <div class="icon">
+                            🛡️
+                        </div>
+
+                        <h3>
+                            O resultado não é uma garantia
+                        </h3>
+
+                        <p>
+                            Uma classificação de força não significa que uma
+                            senha seja impossível de descobrir. O resultado
+                            serve como uma orientação baseada nas características
+                            observadas na senha.
+                        </p>
+
+                        <p>
+                            Para contas importantes, prefira senhas longas,
+                            únicas e diferentes das utilizadas em outros serviços.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="site-footer">
+
+    <div class="container footer-grid">
+
+        <div>
+
+            <div class="footer-brand">
+                SenhaLab
+            </div>
+
+            <p>
+                Ferramentas gratuitas para segurança digital.
+            </p>
+
+        </div>
+
+        <div>
+
+            <div class="footer-title">
+                Navegação
+            </div>
+
+            <div class="footer-links">
+
+                <a href="/">
+                    Início
+                </a>
+
+                <a href="/ferramentas.html">
+                    Ferramentas
+                </a>
+
+                <a href="/artigos.html">
+                    Artigos
+                </a>
+
+            </div>
+
+        </div>
+
+        <div>
+
+            <div class="footer-title">
+                Informações
+            </div>
+
+            <div class="footer-links">
+
+                <a href="/privacidade.html">
+                    Privacidade
+                </a>
+
+                <a href="/termos.html">
+                    Termos
+                </a>
+
+                <a href="/contato.html">
+                    Contato
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container copyright">
+        © 2026 SenhaLab.
+    </div>
+
+</footer>
+
+<script src="/assets/js/verificador-forca.js?v=20261005"></script>
+
+</body>
+
+</html>

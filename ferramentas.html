@@ -1,13 +1,25 @@
 <!doctype html>
+
 <html lang="pt-BR">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
+    <link rel="icon" type="image/png" href="/assets/images/S.png">
+
     <title>Ferramentas | SenhaLab</title>
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=20260929">
+    <meta
+        name="description"
+        content="Ferramentas gratuitas de segurança digital, incluindo gerador de senhas, PIN, senha Wi-Fi, verificador de força e verificador de vazamentos."
+    >
+
+    <link
+        rel="stylesheet"
+        href="/assets/css/style.css?v=20260929"
+    >
+
 </head>
 
 <body>
@@ -26,7 +38,10 @@
                 Início
             </a>
 
-            <a class="active" href="/ferramentas.html">
+            <a
+                class="active"
+                href="/ferramentas.html"
+            >
                 Ferramentas
             </a>
 
@@ -40,7 +55,12 @@
 
         </nav>
 
-        <button class="menu-toggle">
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+        >
             ☰
         </button>
 
@@ -48,118 +68,266 @@
 
 </header>
 
+
 <main>
 
-    <section class="page-hero">
 
-        <div class="container">
+<!-- =====================================================
+     HERO
+     ===================================================== -->
 
-            <div class="breadcrumb">
-                <a href="/">Início</a> / Ferramentas
+<section class="page-hero">
+
+    <div class="container">
+
+        <div class="breadcrumb">
+
+            <a href="/">
+                Início
+            </a>
+
+            /
+
+            Ferramentas
+
+        </div>
+
+        <span class="eyebrow">
+            Ferramentas
+        </span>
+
+        <h1>
+            Ferramentas gratuitas de segurança
+        </h1>
+
+        <p class="lead">
+            Geradores e verificadores simples e rápidos que funcionam
+            diretamente no navegador.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FERRAMENTAS
+     ===================================================== -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="grid-3">
+
+
+            <!-- =================================================
+                 GERADOR DE SENHAS
+                 ================================================= -->
+
+            <div class="card">
+
+                <div class="icon">
+                    🔐
+                </div>
+
+                <h3>
+                    Gerador de Senhas
+                </h3>
+
+                <p>
+                    Crie senhas aleatórias de 8 a 128 caracteres
+                    diretamente no navegador.
+                </p>
+
+                <a
+                    class="card-link"
+                    href="/#gerador"
+                >
+                    Abrir →
+                </a>
+
             </div>
 
+
+            <!-- =================================================
+                 GERADOR DE PIN
+                 ================================================= -->
+
+            <div class="card">
+
+                <div class="icon">
+                    🔢
+                </div>
+
+                <h3>
+                    Gerador de PIN
+                </h3>
+
+                <p>
+                    Gere PINs numéricos aleatórios de 4 a 12 dígitos.
+                </p>
+
+                <a
+                    class="card-link"
+                    href="/ferramentas/gerador-de-pin.html"
+                >
+                    Abrir →
+                </a>
+
+            </div>
+
+
+            <!-- =================================================
+                 SENHA WI-FI
+                 ================================================= -->
+
+            <div class="card">
+
+                <div class="icon">
+                    📶
+                </div>
+
+                <h3>
+                    Gerador de Senha Wi-Fi
+                </h3>
+
+                <p>
+                    Crie uma senha aleatória para proteger sua rede
+                    Wi-Fi.
+                </p>
+
+                <a
+                    class="card-link"
+                    href="/ferramentas/senha-wifi.html"
+                >
+                    Abrir →
+                </a>
+
+            </div>
+
+
+            <!-- =================================================
+                 VERIFICADOR DE FORÇA
+                 ================================================= -->
+
+            <div class="card">
+
+                <div class="icon">
+                    🛡️
+                </div>
+
+                <h3>
+                    Verificador de Força
+                </h3>
+
+                <p>
+                    Verifique se uma senha possui características
+                    recomendadas de segurança.
+                </p>
+
+                <a
+                    class="card-link"
+                    href="/ferramentas/verificador-de-forca.html"
+                >
+                    Verificar →
+                </a>
+
+            </div>
+
+
+            <!-- =================================================
+                 VERIFICADOR DE VAZAMENTOS
+                 ================================================= -->
+
+            <div class="card">
+
+                <div class="icon">
+                    🔎
+                </div>
+
+                <h3>
+                    Verificador de Vazamentos
+                </h3>
+
+                <p>
+                    Descubra se uma senha já apareceu em bases
+                    conhecidas de senhas comprometidas.
+                </p>
+
+                <a
+                    class="card-link"
+                    href="/ferramentas/verificador-de-vazamentos.html"
+                >
+                    Verificar →
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PRIVACIDADE
+     ===================================================== -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="card">
+
             <span class="eyebrow">
-                Ferramentas
+                Privacidade
             </span>
 
-            <h1>
-                Ferramentas gratuitas de segurança
-            </h1>
+            <h2>
+                Suas senhas permanecem no seu navegador
+            </h2>
 
-            <p class="lead">
-                Geradores simples e rápidos que funcionam diretamente no navegador.
+            <p>
+                As ferramentas do SenhaLab foram desenvolvidas para
+                realizar a geração e a análise diretamente no navegador.
+                As senhas digitadas no verificador não precisam ser
+                enviadas para um servidor.
+            </p>
+
+            <p>
+                No verificador de vazamentos, a senha é transformada
+                em um hash no próprio navegador. Apenas uma pequena
+                parte desse hash é utilizada para realizar a consulta,
+                permitindo verificar a existência da senha sem enviar
+                a senha completa ao SenhaLab.
+            </p>
+
+            <p>
+                O SenhaLab não precisa conhecer a senha que você está
+                verificando para realizar a análise.
             </p>
 
         </div>
 
-    </section>
+    </div>
 
-    <section class="section">
+</section>
 
-        <div class="container">
-
-            <div class="grid-3">
-
-                <div class="card">
-
-                    <div class="icon">
-                        🔐
-                    </div>
-
-                    <h3>
-                        Gerador de Senhas
-                    </h3>
-
-                    <p>
-                        Crie senhas de 8 a 128 caracteres.
-                    </p>
-
-                    <a
-                        class="card-link"
-                        href="/#gerador"
-                    >
-                        Abrir →
-                    </a>
-
-                </div>
-
-                <div class="card">
-
-                    <div class="icon">
-                        🔢
-                    </div>
-
-                    <h3>
-                        Gerador de PIN
-                    </h3>
-
-                    <p>
-                        Gere PINs numéricos de 4 a 12 dígitos.
-                    </p>
-
-                    <a
-                        class="card-link"
-                        href="/ferramentas/gerador-de-pin.html"
-                    >
-                        Abrir →
-                    </a>
-
-                </div>
-
-                <div class="card">
-
-                    <div class="icon">
-                        📶
-                    </div>
-
-                    <h3>
-                        Senha Wi-Fi
-                    </h3>
-
-                    <p>
-                        Crie uma senha aleatória para sua rede.
-                    </p>
-
-                    <a
-                        class="card-link"
-                        href="/ferramentas/senha-wifi.html"
-                    >
-                        Abrir →
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
 
 </main>
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
 
 <footer class="site-footer">
 
     <div class="container footer-grid">
+
 
         <div>
 
@@ -172,6 +340,7 @@
             </p>
 
         </div>
+
 
         <div>
 
@@ -197,6 +366,7 @@
 
         </div>
 
+
         <div>
 
             <div class="footer-title">
@@ -221,16 +391,21 @@
 
         </div>
 
+
     </div>
 
+
     <div class="container copyright">
+
         © 2026 SenhaLab.
+
     </div>
 
 </footer>
 
-<script src="/assets/js/app.js?v=20260929"></script>
+
 
 </body>
 
 </html>
+

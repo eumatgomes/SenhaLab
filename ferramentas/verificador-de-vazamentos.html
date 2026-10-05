@@ -1,0 +1,442 @@
+<!doctype html>
+
+<html lang="pt-BR">
+
+<head>
+
+
+<meta charset="utf-8">
+
+<meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+>
+
+<link rel="icon" type="image/png" href="/assets/images/S.png">
+
+<title>Verificador de Vazamentos | SenhaLab</title>
+
+<meta
+    name="description"
+    content="Verifique se uma senha apareceu em bases de dados de vazamentos conhecidas. A consulta utiliza k-anonymity e não envia a senha completa."
+>
+
+<link
+    rel="canonical"
+    href="https://senhalab.com.br/ferramentas/verificador-de-vazamentos.html"
+>
+
+<link
+    rel="stylesheet"
+    href="/assets/css/style.css?v=20261001"
+>
+
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+
+<div class="container header-inner">
+
+    <a class="brand" href="/">
+        <span class="brand-mark">S</span>
+        SenhaLab
+    </a>
+
+    <nav class="nav">
+
+        <a href="/">
+            Início
+        </a>
+
+        <a
+            class="active"
+            href="/ferramentas.html"
+        >
+            Ferramentas
+        </a>
+
+        <a href="/artigos.html">
+            Artigos
+        </a>
+
+        <a href="/sobre.html">
+            Sobre
+        </a>
+
+    </nav>
+
+    <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+    >
+        ☰
+    </button>
+
+</div>
+
+
+</header>
+
+<main>
+
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <div class="breadcrumb">
+
+            <a href="/">
+                Início
+            </a>
+
+            /
+
+            <a href="/ferramentas.html">
+                Ferramentas
+            </a>
+
+            /
+
+            Verificador de vazamentos
+
+        </div>
+
+        <span class="eyebrow">
+            Segurança digital
+        </span>
+
+        <h1>
+            Verificador de vazamentos de senha
+        </h1>
+
+        <p class="lead">
+            Descubra se uma senha já apareceu em bases de dados de
+            vazamentos conhecidas usando uma consulta segura por
+            k-anonymity.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="password-checker">
+
+
+            <!-- AVISO DE PRIVACIDADE -->
+
+            <div class="privacy-box">
+
+                <div class="privacy-icon">
+                    🔒
+                </div>
+
+                <div>
+
+                    <strong>
+                        Sua senha não é enviada ao SenhaLab
+                    </strong>
+
+                    <p>
+                        A senha é processada localmente no seu navegador.
+                        Para a consulta de vazamentos, utilizamos uma
+                        técnica chamada <b>k-anonymity</b>, que permite consultar a base sem enviar a senha completa.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ÁREA PRINCIPAL -->
+
+            <div class="checker-card">
+
+                <div class="checker-label">
+
+                    <label for="leakPasswordInput">
+                        Digite a senha que deseja verificar
+                    </label>
+
+                </div>
+
+
+                <!-- CAMPO DE SENHA -->
+
+                <div class="password-checker-input">
+
+                    <input
+                        id="leakPasswordInput"
+                        type="password"
+                        autocomplete="off"
+                        autocapitalize="none"
+                        spellcheck="false"
+                        placeholder="Digite uma senha..."
+                        aria-label="Senha para verificar"
+                    >
+
+                    <button
+                        id="toggleLeakPassword"
+                        type="button"
+                        class="password-eye"
+                        aria-label="Mostrar senha"
+                    >
+                        👁
+                    </button>
+
+                </div>
+
+
+                <p class="checker-warning">
+
+                    Nunca digite uma senha que você não esteja disposto
+                    a analisar. O SenhaLab não armazena a senha informada.
+
+                </p>
+
+
+                <!-- STATUS DA CONSULTA -->
+
+                <div class="strength-result">
+
+                    <div class="strength-result-top">
+
+                        <span>
+                            Status da consulta
+                        </span>
+
+                        <strong id="leakStatusLabel">
+                            Aguardando senha
+                        </strong>
+
+                    </div>
+
+                    <div class="strength-result-bar">
+
+                        <div
+                            id="leakStatusFill"
+                            class="strength-result-fill"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ÚNICA ÁREA DE RESULTADO -->
+
+                <div
+                    id="leakResult"
+                    class="password-analysis"
+                >
+
+                    <div class="analysis-item pending">
+
+                        <span class="analysis-icon">
+                            •
+                        </span>
+
+                        <span>
+
+                            <strong>
+                                Aguardando análise
+                            </strong>
+
+                            <br>
+
+                            <small>
+                                Digite uma senha para iniciar a verificação.
+                            </small>
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOTÕES -->
+
+                <div class="checker-actions">
+
+                    <button
+                        id="checkLeakPassword"
+                        type="button"
+                        class="btn btn-primary"
+                    >
+                        Verificar senha
+                    </button>
+
+
+                    <button
+                        id="clearLeakPassword"
+                        type="button"
+                        class="btn btn-secondary"
+                    >
+                        Limpar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- INFORMAÇÕES -->
+
+            <div class="checker-info">
+
+
+                <div class="card">
+
+                    <div class="icon">
+                        🔎
+                    </div>
+
+                    <h3>
+                        Como funciona?
+                    </h3>
+
+                    <p>
+                        A senha é transformada em um código criptográfico
+                        no próprio navegador. Apenas uma pequena parte
+                        desse código é utilizada na consulta.
+                    </p>
+
+                    <p>
+                        A senha completa nunca é enviada ao serviço de
+                        consulta.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="icon">
+                        🛡️
+                    </div>
+
+                    <h3>
+                        O que significa o resultado?
+                    </h3>
+
+                    <p>
+                        Se a senha for encontrada, significa que ela já
+                        apareceu em uma base de dados de senhas
+                        comprometidas.
+                    </p>
+
+                    <p>
+                        Nesse caso, recomendamos não utilizar essa senha
+                        em nenhuma conta.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+<footer class="site-footer">
+
+
+<div class="container footer-grid">
+
+
+    <div>
+
+        <div class="footer-brand">
+            SenhaLab
+        </div>
+
+        <p>
+            Ferramentas gratuitas para segurança digital.
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <div class="footer-title">
+            Navegação
+        </div>
+
+        <div class="footer-links">
+
+            <a href="/">
+                Início
+            </a>
+
+            <a href="/ferramentas.html">
+                Ferramentas
+            </a>
+
+            <a href="/artigos.html">
+                Artigos
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div>
+
+        <div class="footer-title">
+            Informações
+        </div>
+
+        <div class="footer-links">
+
+            <a href="/privacidade.html">
+                Privacidade
+            </a>
+
+            <a href="/termos.html">
+                Termos
+            </a>
+
+            <a href="/contato.html">
+                Contato
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="container copyright">
+
+    © 2026 SenhaLab.
+
+</div>
+
+
+</footer>
+
+<script src="/assets/js/verificador-vazamentos.js?v=20261005"></script>
+
+</body>
+
+</html>
