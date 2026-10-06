@@ -1,34 +1,481 @@
 <!doctype html>
+
 <html lang="pt-BR">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
 
 
-    <link rel="icon" type="image/png" href="/assets/images/S.png">
-    <title>Gerador de PIN | SenhaLab</title>
+<meta charset="utf-8">
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=20260929">
+<meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+>
+
+<meta
+    name="robots"
+    content="index,follow,max-image-preview:large"
+>
+
+<meta
+    name="theme-color"
+    content="#2563eb"
+>
+
+<link
+    rel="icon"
+    type="image/png"
+    href="/assets/images/S.png"
+>
+
+<title>
+    Gerador de PIN Aleatório Online | SenhaLab
+</title>
+
+<meta
+    name="description"
+    content="Gere um PIN aleatório de 4 a 12 dígitos gratuitamente. Crie códigos numéricos diretamente no navegador, sem cadastro e sem enviar os dados para um servidor."
+>
+
+<link
+    rel="canonical"
+    href="https://senhalab.com.br/ferramentas/gerador-de-pin.html"
+>
+
+<!-- Open Graph -->
+
+<meta
+    property="og:type"
+    content="website"
+>
+
+<meta
+    property="og:locale"
+    content="pt_BR"
+>
+
+<meta
+    property="og:title"
+    content="Gerador de PIN Aleatório Online | SenhaLab"
+>
+
+<meta
+    property="og:description"
+    content="Gere PINs numéricos aleatórios de 4 a 12 dígitos gratuitamente, diretamente no navegador."
+>
+
+<meta
+    property="og:url"
+    content="https://senhalab.com.br/ferramentas/gerador-de-pin.html"
+>
+
+<meta
+    property="og:site_name"
+    content="SenhaLab"
+>
+
+<meta
+    property="og:image"
+    content="https://senhalab.com.br/assets/images/S.png"
+>
+
+<!-- Twitter / X -->
+
+<meta
+    name="twitter:card"
+    content="summary"
+>
+
+<meta
+    name="twitter:title"
+    content="Gerador de PIN Aleatório Online | SenhaLab"
+>
+
+<meta
+    name="twitter:description"
+    content="Gere PINs numéricos aleatórios de 4 a 12 dígitos diretamente no navegador."
+>
+
+<meta
+    name="twitter:image"
+    content="https://senhalab.com.br/assets/images/S.png"
+>
+
+<link
+    rel="stylesheet"
+    href="/assets/css/style.css?v=20260929"
+>
+
+<!-- Dados estruturados -->
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Gerador de PIN SenhaLab",
+    "url": "https://senhalab.com.br/ferramentas/gerador-de-pin.html",
+    "description": "Gerador gratuito de PINs numéricos aleatórios de 4 a 12 dígitos.",
+    "applicationCategory": "SecurityApplication",
+    "operatingSystem": "Web",
+    "inLanguage": "pt-BR",
+    "isPartOf": {
+        "@type": "WebSite",
+        "name": "SenhaLab",
+        "url": "https://senhalab.com.br/"
+    }
+}
+</script>
+
+
 </head>
 
 <body>
 
 <header class="site-header">
 
-    <div class="container header-inner">
 
-        <a class="brand" href="/">
-            <span class="brand-mark">S</span>SenhaLab
+<div class="container header-inner">
+
+    <a
+        class="brand"
+        href="/"
+        aria-label="SenhaLab - Página inicial"
+    >
+        <span class="brand-mark">S</span>SenhaLab
+    </a>
+
+    <nav
+        class="nav"
+        aria-label="Navegação principal"
+    >
+
+        <a href="/">
+            Início
         </a>
 
-        <nav class="nav">
+        <a
+            class="active"
+            href="/ferramentas.html"
+        >
+            Ferramentas
+        </a>
+
+        <a href="/artigos.html">
+            Artigos
+        </a>
+
+        <a href="/sobre.html">
+            Sobre
+        </a>
+
+    </nav>
+
+    <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+    >
+        ☰
+    </button>
+
+</div>
+
+
+</header>
+
+<main>
+
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <div class="breadcrumb">
 
             <a href="/">
                 Início
             </a>
 
-            <a class="active" href="/ferramentas.html">
+            /
+
+            <a href="/ferramentas.html">
+                Ferramentas
+            </a>
+
+            /
+
+            Gerador de PIN
+
+        </div>
+
+        <span class="eyebrow">
+            Gerador de PIN
+        </span>
+
+        <h1>
+            Gerador de PIN aleatório
+        </h1>
+
+        <p class="lead">
+            Gere um código PIN numérico de 4 a 12 dígitos
+            gratuitamente e diretamente no navegador.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="simple-tool">
+
+            <div
+                id="pinOutput"
+                class="number-output"
+                aria-live="polite"
+                aria-label="PIN gerado"
+            ></div>
+
+            <div class="field">
+
+                <div class="field-label">
+
+                    <span>
+                        Dígitos
+                    </span>
+
+                    <span id="pinLengthValue">
+                        6
+                    </span>
+
+                </div>
+
+                <input
+                    id="pinLength"
+                    type="range"
+                    min="4"
+                    max="12"
+                    value="6"
+                    style="width:100%"
+                    aria-label="Quantidade de dígitos do PIN"
+                >
+
+            </div>
+
+            <button
+                id="generatePin"
+                class="btn btn-primary"
+                type="button"
+                style="width:100%"
+            >
+                Gerar novo PIN
+            </button>
+
+            <button
+                id="copyPin"
+                class="btn btn-secondary"
+                type="button"
+                style="width:100%;margin-top:10px"
+            >
+                Copiar PIN
+            </button>
+
+            <p class="privacy-note">
+                O PIN é gerado localmente no navegador.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INFORMAÇÕES
+     ===================================================== -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="card">
+
+            <span class="eyebrow">
+                Segurança
+            </span>
+
+            <h2>
+                Para que serve um PIN?
+            </h2>
+
+            <p>
+                Um PIN é um código numérico utilizado para
+                autenticação, desbloqueio e proteção de dispositivos,
+                sistemas e outros recursos.
+            </p>
+
+            <p>
+                O SenhaLab permite gerar códigos aleatórios de
+                diferentes comprimentos para situações em que
+                você precisa criar um novo PIN.
+            </p>
+
+            <h2>
+                Como criar um PIN mais difícil de adivinhar?
+            </h2>
+
+            <p>
+                Evite utilizar datas de nascimento, sequências
+                simples como 1234 e números repetidos. Sempre que
+                possível, prefira um código gerado aleatoriamente.
+            </p>
+
+            <h2>
+                O PIN é enviado para algum servidor?
+            </h2>
+
+            <p>
+                Não. A geração acontece diretamente no navegador.
+                O SenhaLab não precisa receber o PIN gerado para
+                realizar a operação.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ARTIGOS RELACIONADOS
+     ===================================================== -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="eyebrow">
+                Segurança digital
+            </span>
+
+            <h2>
+                Mais conteúdos do SenhaLab
+            </h2>
+
+            <p class="lead">
+                Aprenda mais sobre senhas e proteção de contas.
+            </p>
+
+        </div>
+
+        <div class="grid-3">
+
+            <div class="card">
+
+                <h3>
+                    O que é uma senha forte?
+                </h3>
+
+                <p>
+                    Entenda como comprimento, aleatoriedade e
+                    exclusividade ajudam a proteger suas contas.
+                </p>
+
+                <a
+                    class="card-link"
+                    href="/artigos/senha-forte.html"
+                >
+                    Ler artigo →
+                </a>
+
+            </div>
+
+            <div class="card">
+
+                <h3>
+                    O que é MFA?
+                </h3>
+
+                <p>
+                    Descubra como a autenticação multifator adiciona
+                    uma camada extra de proteção.
+                </p>
+
+                <a
+                    class="card-link"
+                    href="/artigos/mfa.html"
+                >
+                    Ler artigo →
+                </a>
+
+            </div>
+
+            <div class="card">
+
+                <h3>
+                    Sua senha já vazou?
+                </h3>
+
+                <p>
+                    Saiba como verificar se uma senha apareceu em
+                    bases de credenciais comprometidas.
+                </p>
+
+                <a
+                    class="card-link"
+                    href="/artigos/senha-vazada.html"
+                >
+                    Ler artigo →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+<footer class="site-footer">
+
+
+<div class="container footer-grid">
+
+    <div>
+
+        <div class="footer-brand">
+            SenhaLab
+        </div>
+
+        <p>
+            Ferramentas gratuitas para segurança digital.
+        </p>
+
+    </div>
+
+    <div>
+
+        <div class="footer-title">
+            Navegação
+        </div>
+
+        <div class="footer-links">
+
+            <a href="/">
+                Início
+            </a>
+
+            <a href="/ferramentas.html">
                 Ferramentas
             </a>
 
@@ -36,190 +483,44 @@
                 Artigos
             </a>
 
-            <a href="/sobre.html">
-                Sobre
+        </div>
+
+    </div>
+
+    <div>
+
+        <div class="footer-title">
+            Informações
+        </div>
+
+        <div class="footer-links">
+
+            <a href="/privacidade.html">
+                Privacidade
             </a>
 
-        </nav>
+            <a href="/termos.html">
+                Termos
+            </a>
 
-        <button class="menu-toggle">
-            ☰
-        </button>
-
-    </div>
-
-</header>
-
-<main>
-
-    <section class="page-hero">
-
-        <div class="container">
-
-            <div class="breadcrumb">
-
-                <a href="/">
-                    Início
-                </a>
-
-                /
-
-                <a href="/ferramentas.html">
-                    Ferramentas
-                </a>
-
-                / Gerador de PIN
-
-            </div>
-
-            <span class="eyebrow">
-                Gerador de PIN
-            </span>
-
-            <h1>
-                Gere um PIN aleatório
-            </h1>
-
-            <p class="lead">
-                Crie um código numérico de 4 a 12 dígitos.
-            </p>
-
-        </div>
-
-    </section>
-
-    <section class="section">
-
-        <div class="container">
-
-            <div class="simple-tool">
-
-                <div id="pinOutput" class="number-output"></div>
-
-                <div class="field">
-
-                    <div class="field-label">
-
-                        <span>
-                            Dígitos
-                        </span>
-
-                        <span id="pinLengthValue">
-                            6
-                        </span>
-
-                    </div>
-
-                    <input
-                        id="pinLength"
-                        type="range"
-                        min="4"
-                        max="12"
-                        value="6"
-                        style="width:100%"
-                    >
-
-                </div>
-
-                <button
-                    id="generatePin"
-                    class="btn btn-primary"
-                    style="width:100%"
-                >
-                    Gerar novo PIN
-                </button>
-
-                <button
-                    id="copyPin"
-                    class="btn btn-secondary"
-                    style="width:100%;margin-top:10px"
-                >
-                    Copiar PIN
-                </button>
-
-                <p class="privacy-note">
-                    Gerado localmente no navegador.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-</main>
-
-<footer class="site-footer">
-
-    <div class="container footer-grid">
-
-        <div>
-
-            <div class="footer-brand">
-                SenhaLab
-            </div>
-
-            <p>
-                Ferramentas gratuitas para segurança digital.
-            </p>
-
-        </div>
-
-        <div>
-
-            <div class="footer-title">
-                Navegação
-            </div>
-
-            <div class="footer-links">
-
-                <a href="/">
-                    Início
-                </a>
-
-                <a href="/ferramentas.html">
-                    Ferramentas
-                </a>
-
-                <a href="/artigos.html">
-                    Artigos
-                </a>
-
-            </div>
-
-        </div>
-
-        <div>
-
-            <div class="footer-title">
-                Informações
-            </div>
-
-            <div class="footer-links">
-
-                <a href="/privacidade.html">
-                    Privacidade
-                </a>
-
-                <a href="/termos.html">
-                    Termos
-                </a>
-
-                <a href="/contato.html">
-                    Contato
-                </a>
-
-            </div>
+            <a href="/contato.html">
+                Contato
+            </a>
 
         </div>
 
     </div>
 
-    <div class="container copyright">
-        © 2026 SenhaLab.
-    </div>
+</div>
+
+<div class="container copyright">
+    © 2026 SenhaLab.
+</div>
+
 
 </footer>
+
+<script src="/assets/js/menu.js?v=20261005"></script>
 
 <script src="/assets/js/gerador-pin.js?v=20261005"></script>
 

@@ -1,34 +1,490 @@
 <!doctype html>
+
 <html lang="pt-BR">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <link rel="icon" type="image/png" href="/assets/images/S.png">
 
-    <title>Gerador de Senha Wi-Fi | SenhaLab</title>
+<meta charset="utf-8">
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=20260929">
+<meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+>
+
+<meta
+    name="robots"
+    content="index,follow,max-image-preview:large"
+>
+
+<meta
+    name="theme-color"
+    content="#2563eb"
+>
+
+<link
+    rel="icon"
+    type="image/png"
+    href="/assets/images/S.png"
+>
+
+<title>
+    Gerador de Senha Wi-Fi Forte e Aleatória | SenhaLab
+</title>
+
+<meta
+    name="description"
+    content="Gere uma senha Wi-Fi forte, aleatória e gratuita de 12 a 63 caracteres. Crie sua senha diretamente no navegador, sem cadastro."
+>
+
+<link
+    rel="canonical"
+    href="https://senhalab.com.br/ferramentas/senha-wifi.html"
+>
+
+<!-- Open Graph -->
+
+<meta
+    property="og:type"
+    content="website"
+>
+
+<meta
+    property="og:locale"
+    content="pt_BR"
+>
+
+<meta
+    property="og:title"
+    content="Gerador de Senha Wi-Fi Forte e Aleatória | SenhaLab"
+>
+
+<meta
+    property="og:description"
+    content="Crie uma senha Wi-Fi forte e aleatória de 12 a 63 caracteres diretamente no navegador."
+>
+
+<meta
+    property="og:url"
+    content="https://senhalab.com.br/ferramentas/senha-wifi.html"
+>
+
+<meta
+    property="og:site_name"
+    content="SenhaLab"
+>
+
+<meta
+    property="og:image"
+    content="https://senhalab.com.br/assets/images/S.png"
+>
+
+<!-- Twitter / X -->
+
+<meta
+    name="twitter:card"
+    content="summary"
+>
+
+<meta
+    name="twitter:title"
+    content="Gerador de Senha Wi-Fi Forte e Aleatória | SenhaLab"
+>
+
+<meta
+    name="twitter:description"
+    content="Gere gratuitamente uma senha Wi-Fi aleatória de 12 a 63 caracteres."
+>
+
+<meta
+    name="twitter:image"
+    content="https://senhalab.com.br/assets/images/S.png"
+>
+
+<link
+    rel="stylesheet"
+    href="/assets/css/style.css?v=20260929"
+>
+
+<!-- Dados estruturados -->
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Gerador de Senha Wi-Fi SenhaLab",
+    "url": "https://senhalab.com.br/ferramentas/senha-wifi.html",
+    "description": "Gerador gratuito de senhas Wi-Fi aleatórias de 12 a 63 caracteres.",
+    "applicationCategory": "SecurityApplication",
+    "operatingSystem": "Web",
+    "inLanguage": "pt-BR",
+    "isPartOf": {
+        "@type": "WebSite",
+        "name": "SenhaLab",
+        "url": "https://senhalab.com.br/"
+    }
+}
+</script>
+
+
 </head>
 
 <body>
 
 <header class="site-header">
 
-    <div class="container header-inner">
 
-        <a class="brand" href="/">
-            <span class="brand-mark">S</span>SenhaLab
+<div class="container header-inner">
+
+    <a
+        class="brand"
+        href="/"
+        aria-label="SenhaLab - Página inicial"
+    >
+        <span class="brand-mark">S</span>SenhaLab
+    </a>
+
+    <nav
+        class="nav"
+        aria-label="Navegação principal"
+    >
+
+        <a href="/">
+            Início
         </a>
 
-        <nav class="nav">
+        <a
+            class="active"
+            href="/ferramentas.html"
+        >
+            Ferramentas
+        </a>
+
+        <a href="/artigos.html">
+            Artigos
+        </a>
+
+        <a href="/sobre.html">
+            Sobre
+        </a>
+
+    </nav>
+
+    <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+    >
+        ☰
+    </button>
+
+</div>
+
+
+</header>
+
+<main>
+
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <div class="breadcrumb">
 
             <a href="/">
                 Início
             </a>
 
-            <a class="active" href="/ferramentas.html">
+            /
+
+            <a href="/ferramentas.html">
+                Ferramentas
+            </a>
+
+            /
+
+            Senha Wi-Fi
+
+        </div>
+
+        <span class="eyebrow">
+            Gerador Wi-Fi
+        </span>
+
+        <h1>
+            Gerador de senha Wi-Fi forte e aleatória
+        </h1>
+
+        <p class="lead">
+            Gere uma senha aleatória de 12 a 63 caracteres
+            para proteger sua rede Wi-Fi.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="simple-tool">
+
+            <div
+                id="wifiOutput"
+                class="number-output"
+                style="font-size:1.1rem;letter-spacing:.02em"
+                aria-live="polite"
+                aria-label="Senha Wi-Fi gerada"
+            ></div>
+
+            <div class="field">
+
+                <div class="field-label">
+
+                    <span>
+                        Comprimento
+                    </span>
+
+                    <span id="wifiLengthValue">
+                        24
+                    </span>
+
+                </div>
+
+                <input
+                    id="wifiLength"
+                    type="range"
+                    min="12"
+                    max="63"
+                    value="24"
+                    style="width:100%"
+                    aria-label="Comprimento da senha Wi-Fi"
+                >
+
+            </div>
+
+            <button
+                id="generateWifi"
+                class="btn btn-primary"
+                type="button"
+                style="width:100%"
+            >
+                Gerar nova senha
+            </button>
+
+            <button
+                id="copyWifi"
+                class="btn btn-secondary"
+                type="button"
+                style="width:100%;margin-top:10px"
+            >
+                Copiar senha
+            </button>
+
+            <p class="privacy-note">
+                A senha é gerada localmente no navegador.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INFORMAÇÕES
+     ===================================================== -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="card">
+
+            <span class="eyebrow">
+                Segurança Wi-Fi
+            </span>
+
+            <h2>
+                Por que usar uma senha Wi-Fi forte?
+            </h2>
+
+            <p>
+                A senha da rede Wi-Fi ajuda a impedir que pessoas
+                não autorizadas utilizem sua conexão. Uma senha
+                longa e aleatória é mais difícil de adivinhar do
+                que combinações simples ou informações pessoais.
+            </p>
+
+            <h2>
+                Qual comprimento escolher?
+            </h2>
+
+            <p>
+                Quanto maior a senha, maior o número de combinações
+                possíveis. O SenhaLab permite gerar senhas de
+                12 a 63 caracteres para oferecer flexibilidade
+                na configuração da sua rede.
+            </p>
+
+            <h2>
+                Evite informações fáceis de adivinhar
+            </h2>
+
+            <p>
+                Evite utilizar nomes, endereços, números de telefone,
+                datas de nascimento ou outras informações pessoais
+                na senha da sua rede.
+            </p>
+
+            <h2>
+                A senha é enviada para o SenhaLab?
+            </h2>
+
+            <p>
+                Não. A geração acontece diretamente no navegador.
+                O SenhaLab não precisa receber a senha gerada para
+                realizar a operação.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ARTIGOS RELACIONADOS
+     ===================================================== -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="eyebrow">
+                Segurança digital
+            </span>
+
+            <h2>
+                Aprenda mais sobre segurança
+            </h2>
+
+            <p class="lead">
+                Confira conteúdos do SenhaLab para proteger
+                melhor suas contas e dispositivos.
+            </p>
+
+        </div>
+
+        <div class="grid-3">
+
+            <div class="card">
+
+                <h3>
+                    O que é uma senha forte?
+                </h3>
+
+                <p>
+                    Entenda por que comprimento, aleatoriedade
+                    e exclusividade são importantes.
+                </p>
+
+                <a
+                    class="card-link"
+                    href="/artigos/senha-forte.html"
+                >
+                    Ler artigo →
+                </a>
+
+            </div>
+
+            <div class="card">
+
+                <h3>
+                    O que é MFA?
+                </h3>
+
+                <p>
+                    Entenda como a autenticação multifator
+                    adiciona uma camada extra de proteção.
+                </p>
+
+                <a
+                    class="card-link"
+                    href="/artigos/mfa.html"
+                >
+                    Ler artigo →
+                </a>
+
+            </div>
+
+            <div class="card">
+
+                <h3>
+                    Sua senha já vazou?
+                </h3>
+
+                <p>
+                    Descubra como verificar se uma senha apareceu
+                    em bases de credenciais comprometidas.
+                </p>
+
+                <a
+                    class="card-link"
+                    href="/artigos/senha-vazada.html"
+                >
+                    Ler artigo →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+<footer class="site-footer">
+
+
+<div class="container footer-grid">
+
+    <div>
+
+        <div class="footer-brand">
+            SenhaLab
+        </div>
+
+        <p>
+            Ferramentas gratuitas para segurança digital.
+        </p>
+
+    </div>
+
+    <div>
+
+        <div class="footer-title">
+            Navegação
+        </div>
+
+        <div class="footer-links">
+
+            <a href="/">
+                Início
+            </a>
+
+            <a href="/ferramentas.html">
                 Ferramentas
             </a>
 
@@ -36,194 +492,44 @@
                 Artigos
             </a>
 
-            <a href="/sobre.html">
-                Sobre
+        </div>
+
+    </div>
+
+    <div>
+
+        <div class="footer-title">
+            Informações
+        </div>
+
+        <div class="footer-links">
+
+            <a href="/privacidade.html">
+                Privacidade
             </a>
 
-        </nav>
+            <a href="/termos.html">
+                Termos
+            </a>
 
-        <button class="menu-toggle">
-            ☰
-        </button>
-
-    </div>
-
-</header>
-
-<main>
-
-    <section class="page-hero">
-
-        <div class="container">
-
-            <div class="breadcrumb">
-
-                <a href="/">
-                    Início
-                </a>
-
-                /
-
-                <a href="/ferramentas.html">
-                    Ferramentas
-                </a>
-
-                / Senha Wi-Fi
-
-            </div>
-
-            <span class="eyebrow">
-                Gerador Wi-Fi
-            </span>
-
-            <h1>
-                Gere uma senha forte para sua rede Wi-Fi
-            </h1>
-
-            <p class="lead">
-                Crie uma senha aleatória de 12 a 63 caracteres.
-            </p>
-
-        </div>
-
-    </section>
-
-    <section class="section">
-
-        <div class="container">
-
-            <div class="simple-tool">
-
-                <div
-                    id="wifiOutput"
-                    class="number-output"
-                    style="font-size:1.1rem;letter-spacing:.02em"
-                ></div>
-
-                <div class="field">
-
-                    <div class="field-label">
-
-                        <span>
-                            Comprimento
-                        </span>
-
-                        <span id="wifiLengthValue">
-                            24
-                        </span>
-
-                    </div>
-
-                    <input
-                        id="wifiLength"
-                        type="range"
-                        min="12"
-                        max="63"
-                        value="24"
-                        style="width:100%"
-                    >
-
-                </div>
-
-                <button
-                    id="generateWifi"
-                    class="btn btn-primary"
-                    style="width:100%"
-                >
-                    Gerar nova senha
-                </button>
-
-                <button
-                    id="copyWifi"
-                    class="btn btn-secondary"
-                    style="width:100%;margin-top:10px"
-                >
-                    Copiar senha
-                </button>
-
-                <p class="privacy-note">
-                    Gerada localmente no navegador.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-</main>
-
-<footer class="site-footer">
-
-    <div class="container footer-grid">
-
-        <div>
-
-            <div class="footer-brand">
-                SenhaLab
-            </div>
-
-            <p>
-                Ferramentas gratuitas para segurança digital.
-            </p>
-
-        </div>
-
-        <div>
-
-            <div class="footer-title">
-                Navegação
-            </div>
-
-            <div class="footer-links">
-
-                <a href="/">
-                    Início
-                </a>
-
-                <a href="/ferramentas.html">
-                    Ferramentas
-                </a>
-
-                <a href="/artigos.html">
-                    Artigos
-                </a>
-
-            </div>
-
-        </div>
-
-        <div>
-
-            <div class="footer-title">
-                Informações
-            </div>
-
-            <div class="footer-links">
-
-                <a href="/privacidade.html">
-                    Privacidade
-                </a>
-
-                <a href="/termos.html">
-                    Termos
-                </a>
-
-                <a href="/contato.html">
-                    Contato
-                </a>
-
-            </div>
+            <a href="/contato.html">
+                Contato
+            </a>
 
         </div>
 
     </div>
 
-    <div class="container copyright">
-        © 2026 SenhaLab.
-    </div>
+</div>
+
+<div class="container copyright">
+    © 2026 SenhaLab.
+</div>
+
 
 </footer>
+
+<script src="/assets/js/menu.js?v=20261005"></script>
 
 <script src="/assets/js/senha-wifi.js?v=20261002"></script>
 

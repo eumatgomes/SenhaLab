@@ -2,16 +2,32 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
 
+    <meta
+        name="viewport"
+        content="width=device-width,initial-scale=1"
+    >
 
-    <link rel="icon" type="image/png" href="/assets/images/S.png">
-    <title>Verificador de Força de Senha | SenhaLab</title>
+    <link
+        rel="icon"
+        type="image/png"
+        href="/assets/images/S.png"
+    >
+
+    <title>
+        Verificador de Força de Senha Online Grátis | SenhaLab
+    </title>
 
     <meta
         name="description"
-        content="Verifique a força de uma senha diretamente no navegador. A análise é feita localmente e o SenhaLab não recebe nem armazena sua senha."
+        content="Teste a força de uma senha gratuitamente. Analise comprimento, letras, números, símbolos, repetições e padrões diretamente no navegador com o SenhaLab."
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
     >
 
     <link
@@ -19,10 +35,43 @@
         href="https://senhalab.com.br/ferramentas/verificador-de-forca.html"
     >
 
+    <!-- Open Graph -->
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:title"
+        content="Verificador de Força de Senha | SenhaLab"
+    >
+
+    <meta
+        property="og:description"
+        content="Teste a força de uma senha gratuitamente e veja características que podem torná-la mais resistente a tentativas de descoberta."
+    >
+
+    <meta
+        property="og:url"
+        content="https://senhalab.com.br/ferramentas/verificador-de-forca.html"
+    >
+
+    <meta
+        property="og:site_name"
+        content="SenhaLab"
+    >
+
+    <meta
+        property="og:image"
+        content="https://senhalab.com.br/assets/images/S.png"
+    >
+
     <link
         rel="stylesheet"
         href="/assets/css/style.css?v=20261001"
     >
+
 </head>
 
 <body>
@@ -41,7 +90,10 @@
                 Início
             </a>
 
-            <a class="active" href="/ferramentas.html">
+            <a
+                class="active"
+                href="/ferramentas.html"
+            >
                 Ferramentas
             </a>
 
@@ -59,6 +111,7 @@
             class="menu-toggle"
             type="button"
             aria-label="Abrir menu"
+            aria-expanded="false"
         >
             ☰
         </button>
@@ -137,9 +190,11 @@
                 <div class="checker-card">
 
                     <div class="checker-label">
+
                         <label for="passwordCheckerInput">
                             Digite uma senha para analisar
                         </label>
+
                     </div>
 
                     <div class="password-checker-input">
@@ -217,9 +272,9 @@
                     <div class="checker-actions">
 
                         <button
-                        id="checkPassword"
-                        type="button"
-                        class="btn btn-primary"
+                            id="checkPassword"
+                            type="button"
+                            class="btn btn-primary"
                         >
                             Verificar senha comprometida
                         </button>
@@ -397,8 +452,11 @@
 
 </footer>
 
+<script src="/assets/js/menu.js?v=20261005"></script>
+
 <script src="/assets/js/verificador-forca.js?v=20261005"></script>
 
 </body>
 
 </html>
+

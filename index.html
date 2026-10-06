@@ -1,255 +1,605 @@
 <!doctype html>
+
 <html lang="pt-BR">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <link rel="icon" type="image/png" href="/assets/images/S.png">
 
-    <title>Gerador de Senhas Fortes e Aleatórias | SenhaLab</title>
+<meta charset="utf-8">
 
-    <meta
-        name="description"
-        content="Gere senhas fortes, aleatórias e personalizadas gratuitamente. Escolha o comprimento e os tipos de caracteres e crie sua senha diretamente no navegador, sem cadastro."
-    >
+<meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+>
 
-    <link rel="canonical" href="https://senhalab.com.br/">
+<meta
+    name="robots"
+    content="index,follow,max-image-preview:large"
+>
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=20260929">
+<meta
+    name="theme-color"
+    content="#2563eb"
+>
+
+<link
+    rel="icon"
+    type="image/png"
+    href="/assets/images/S.png"
+>
+
+<title>
+    Gerador de Senhas Fortes e Aleatórias | SenhaLab
+</title>
+
+<meta
+    name="description"
+    content="Gere senhas fortes, aleatórias e seguras gratuitamente. Personalize o comprimento e os caracteres e crie sua senha diretamente no navegador, sem cadastro."
+>
+
+<link
+    rel="canonical"
+    href="https://senhalab.com.br/"
+>
+
+<!-- Open Graph -->
+
+<meta
+    property="og:type"
+    content="website"
+>
+
+<meta
+    property="og:locale"
+    content="pt_BR"
+>
+
+<meta
+    property="og:title"
+    content="Gerador de Senhas Fortes e Aleatórias | SenhaLab"
+>
+
+<meta
+    property="og:description"
+    content="Gere senhas fortes, aleatórias e personalizadas diretamente no navegador, sem cadastro."
+>
+
+<meta
+    property="og:url"
+    content="https://senhalab.com.br/"
+>
+
+<meta
+    property="og:site_name"
+    content="SenhaLab"
+>
+
+<meta
+    property="og:image"
+    content="https://senhalab.com.br/assets/images/S.png"
+>
+
+<!-- Twitter / X -->
+
+<meta
+    name="twitter:card"
+    content="summary"
+>
+
+<meta
+    name="twitter:title"
+    content="Gerador de Senhas Fortes e Aleatórias | SenhaLab"
+>
+
+<meta
+    name="twitter:description"
+    content="Gere senhas fortes, aleatórias e personalizadas diretamente no navegador."
+>
+
+<meta
+    name="twitter:image"
+    content="https://senhalab.com.br/assets/images/S.png"
+>
+
+<link
+    rel="stylesheet"
+    href="/assets/css/style.css?v=20260929"
+>
+
+<!-- Dados estruturados -->
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "SenhaLab",
+    "url": "https://senhalab.com.br/",
+    "description": "Ferramentas gratuitas para geração e análise de senhas e segurança digital.",
+    "inLanguage": "pt-BR"
+}
+</script>
+
+
 </head>
 
 <body>
 
 <header class="site-header">
-    <div class="container header-inner">
 
-        <a class="brand" href="/">
-            <span class="brand-mark">S</span>SenhaLab
+
+<div class="container header-inner">
+
+    <a
+        class="brand"
+        href="/"
+        aria-label="SenhaLab - Página inicial"
+    >
+        <span class="brand-mark">S</span>SenhaLab
+    </a>
+
+    <nav
+        class="nav"
+        aria-label="Navegação principal"
+    >
+
+        <a
+            class="active"
+            href="/"
+        >
+            Início
         </a>
 
-        <nav class="nav">
-            <a class="active" href="/">Início</a>
-            <a href="/ferramentas.html">Ferramentas</a>
-            <a href="/artigos.html">Artigos</a>
-            <a href="/sobre.html">Sobre</a>
-        </nav>
+        <a href="/ferramentas.html">
+            Ferramentas
+        </a>
 
-        <button class="menu-toggle" aria-expanded="false">☰</button>
+        <a href="/artigos.html">
+            Artigos
+        </a>
 
-    </div>
+        <a href="/sobre.html">
+            Sobre
+        </a>
+
+    </nav>
+
+    <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-label="Abrir menu"
+    >
+        ☰
+    </button>
+
+</div>
+
+
 </header>
 
 <main>
 
 <section class="hero">
 
-    <div class="container hero-grid">
 
-        <div>
+<div class="container hero-grid">
 
-            <span class="eyebrow">Segurança digital</span>
+    <div>
 
-            <h1>Gere uma senha forte em segundos.</h1>
+        <span class="eyebrow">
+            Segurança digital
+        </span>
 
-            <p class="lead">
-                Crie senhas aleatórias e personalizadas diretamente no navegador.
-                Sem cadastro e sem enviar sua senha para um servidor.
-            </p>
+        <h1>
+            Gere uma senha forte em segundos.
+        </h1>
 
-            <div class="hero-actions">
+        <p class="lead">
+            Crie senhas aleatórias e personalizadas diretamente no navegador.
+            Sem cadastro e sem enviar sua senha para um servidor.
+        </p>
 
-                <a class="btn btn-secondary" href="/ferramentas.html">
-                    Ver outras ferramentas
-                </a>
+        <div class="hero-actions">
 
-                <a class="btn btn-primary" href="#gerador">
-                    Gerar agora
-                </a>
-
-            </div>
-
-        </div>
-
-        <div class="generator-card" id="gerador">
-
-            <div class="output-row">
-
-                <div id="passwordOutput" class="password-output"></div>
-
-                <button id="copyPassword" class="btn btn-secondary copy-btn">
-                    Copiar
-                </button>
-
-            </div>
-
-            <div class="strength">
-
-                <div class="strength-top">
-                    <span>Força estimada</span>
-                    <span id="strengthLabel">Muito forte</span>
-                </div>
-
-                <div class="strength-bar">
-                    <div
-                        id="strengthFill"
-                        class="strength-fill"
-                    ></div>
-                </div>
-
-            </div>
-
-            <div class="field">
-
-                <div class="field-label">
-                    <span>Comprimento</span>
-                    <span id="lengthValue">20</span>
-                </div>
-
-                <input
-                    id="passwordLength"
-                    type="range"
-                    min="8"
-                    max="128"
-                    value="20"
-                >
-
-            </div>
-
-            <div class="options">
-
-                <label class="check">
-                    <input id="lowercase" type="checkbox" checked>
-                    Minúsculas
-                </label>
-
-                <label class="check">
-                    <input id="uppercase" type="checkbox" checked>
-                    Maiúsculas
-                </label>
-
-                <label class="check">
-                    <input id="numbers" type="checkbox" checked>
-                    Números
-                </label>
-
-                <label class="check">
-                    <input id="symbols" type="checkbox" checked>
-                    Símbolos
-                </label>
-
-                <label
-                    class="check"
-                    style="grid-column:1/-1"
-                >
-                    <input id="avoidAmbiguous" type="checkbox">
-                    Evitar caracteres ambíguos
-                </label>
-
-            </div>
-
-            <button
-                id="generatePassword"
-                class="btn btn-primary btn-generate"
+            <a
+                class="btn btn-secondary"
+                href="/ferramentas.html"
             >
-                Gerar nova senha
-            </button>
+                Ver outras ferramentas
+            </a>
 
-            <p class="privacy-note">
-                Gerada localmente no navegador usando aleatoriedade criptograficamente segura.
-            </p>
+            <a
+                class="btn btn-primary"
+                href="#gerador"
+            >
+                Gerar agora
+            </a>
 
         </div>
 
     </div>
+
+    <div
+        class="generator-card"
+        id="gerador"
+    >
+
+        <div class="output-row">
+
+            <div
+                id="passwordOutput"
+                class="password-output"
+                aria-live="polite"
+                aria-label="Senha gerada"
+            ></div>
+
+            <button
+                id="copyPassword"
+                type="button"
+                class="btn btn-secondary copy-btn"
+            >
+                Copiar
+            </button>
+
+        </div>
+
+        <div class="strength">
+
+            <div class="strength-top">
+
+                <span>
+                    Força estimada
+                </span>
+
+                <span id="strengthLabel">
+                    Muito forte
+                </span>
+
+            </div>
+
+            <div class="strength-bar">
+
+                <div
+                    id="strengthFill"
+                    class="strength-fill"
+                ></div>
+
+            </div>
+
+        </div>
+
+        <div class="field">
+
+            <div class="field-label">
+
+                <span>
+                    Comprimento
+                </span>
+
+                <span id="lengthValue">
+                    20
+                </span>
+
+            </div>
+
+            <input
+                id="passwordLength"
+                type="range"
+                min="8"
+                max="128"
+                value="20"
+                aria-label="Comprimento da senha"
+            >
+
+        </div>
+
+        <div class="options">
+
+            <label class="check">
+
+                <input
+                    id="lowercase"
+                    type="checkbox"
+                    checked
+                >
+
+                Minúsculas
+
+            </label>
+
+            <label class="check">
+
+                <input
+                    id="uppercase"
+                    type="checkbox"
+                    checked
+                >
+
+                Maiúsculas
+
+            </label>
+
+            <label class="check">
+
+                <input
+                    id="numbers"
+                    type="checkbox"
+                    checked
+                >
+
+                Números
+
+            </label>
+
+            <label class="check">
+
+                <input
+                    id="symbols"
+                    type="checkbox"
+                    checked
+                >
+
+                Símbolos
+
+            </label>
+
+            <label
+                class="check"
+                style="grid-column:1/-1"
+            >
+
+                <input
+                    id="avoidAmbiguous"
+                    type="checkbox"
+                >
+
+                Evitar caracteres ambíguos
+
+            </label>
+
+        </div>
+
+        <button
+            id="generatePassword"
+            type="button"
+            class="btn btn-primary btn-generate"
+        >
+            Gerar nova senha
+        </button>
+
+        <p class="privacy-note">
+            Gerada localmente no navegador usando aleatoriedade
+            criptograficamente segura.
+        </p>
+
+    </div>
+
+</div>
+
 
 </section>
 
 <section class="trust">
 
-    <div class="container trust-grid">
 
-        <div class="trust-item">
-            <strong>100% gratuito</strong>
-            <span>Sem cadastro</span>
-        </div>
+<div class="container trust-grid">
 
-        <div class="trust-item">
-            <strong>Local</strong>
-            <span>No navegador</span>
-        </div>
+    <div class="trust-item">
 
-        <div class="trust-item">
-            <strong>8 a 128</strong>
-            <span>Caracteres</span>
-        </div>
+        <strong>
+            100% gratuito
+        </strong>
 
-        <div class="trust-item">
-            <strong>Rápido</strong>
-            <span>Pronto em segundos</span>
-        </div>
+        <span>
+            Sem cadastro
+        </span>
 
     </div>
+
+    <div class="trust-item">
+
+        <strong>
+            Local
+        </strong>
+
+        <span>
+            No navegador
+        </span>
+
+    </div>
+
+    <div class="trust-item">
+
+        <strong>
+            8 a 128
+        </strong>
+
+        <span>
+            Caracteres
+        </span>
+
+    </div>
+
+    <div class="trust-item">
+
+        <strong>
+            Rápido
+        </strong>
+
+        <span>
+            Pronto em segundos
+        </span>
+
+    </div>
+
+</div>
+
 
 </section>
 
 <section class="section">
 
-    <div class="container">
 
-        <div class="section-header">
+<div class="container">
 
-            <span class="eyebrow">Por que usar?</span>
+    <div class="section-header">
 
-            <h2>Uma senha diferente para cada serviço</h2>
+        <span class="eyebrow">
+            Por que usar?
+        </span>
 
-            <p class="lead">
-                Evite reutilizar senhas e prefira credenciais longas e aleatórias.
+        <h2>
+            Uma senha diferente para cada serviço
+        </h2>
+
+        <p class="lead">
+            Evite reutilizar senhas e prefira credenciais longas e aleatórias.
+        </p>
+
+    </div>
+
+    <div class="grid-3">
+
+        <div class="card">
+
+            <div class="icon">
+                ✓
+            </div>
+
+            <h3>
+                Aleatória
+            </h3>
+
+            <p>
+                Evita padrões fáceis de adivinhar.
             </p>
 
         </div>
 
-        <div class="grid-3">
+        <div class="card">
 
-            <div class="card">
-
-                <div class="icon">✓</div>
-
-                <h3>Aleatória</h3>
-
-                <p>
-                    Evita padrões fáceis de adivinhar.
-                </p>
-
+            <div class="icon">
+                🔒
             </div>
 
-            <div class="card">
+            <h3>
+                Privacidade
+            </h3>
 
-                <div class="icon">🔒</div>
+            <p>
+                A geração acontece no seu navegador.
+            </p>
 
-                <h3>Privacidade</h3>
+        </div>
 
-                <p>
-                    A geração acontece no seu navegador.
-                </p>
+        <div class="card">
 
+            <div class="icon">
+                ⚙
             </div>
 
-            <div class="card">
+            <h3>
+                Flexível
+            </h3>
 
-                <div class="icon">⚙</div>
-
-                <h3>Flexível</h3>
-
-                <p>
-                    Escolha comprimento e tipos de caracteres.
-                </p>
-
-            </div>
+            <p>
+                Escolha comprimento e tipos de caracteres.
+            </p>
 
         </div>
 
     </div>
+
+</div>
+
+
+</section>
+
+<section class="section">
+
+
+<div class="container">
+
+    <div class="section-header">
+
+        <span class="eyebrow">
+            Segurança digital
+        </span>
+
+        <h2>
+            Mais ferramentas para proteger suas contas
+        </h2>
+
+        <p class="lead">
+            Além do gerador de senhas, o SenhaLab oferece ferramentas
+            gratuitas para analisar e verificar suas credenciais.
+        </p>
+
+    </div>
+
+    <div class="grid-3">
+
+        <div class="card">
+
+            <h3>
+                Verificador de força
+            </h3>
+
+            <p>
+                Analise características de uma senha diretamente no navegador.
+            </p>
+
+            <a
+                class="card-link"
+                href="/ferramentas/verificador-de-forca.html"
+            >
+                Verificar força →
+            </a>
+
+        </div>
+
+        <div class="card">
+
+            <h3>
+                Verificador de vazamentos
+            </h3>
+
+            <p>
+                Consulte se uma senha apareceu em bases de credenciais comprometidas.
+            </p>
+
+            <a
+                class="card-link"
+                href="/ferramentas/verificador-de-vazamentos.html"
+            >
+                Verificar senha →
+            </a>
+
+        </div>
+
+        <div class="card">
+
+            <h3>
+                Aprenda sobre segurança
+            </h3>
+
+            <p>
+                Confira artigos práticos sobre senhas, MFA e proteção de contas.
+            </p>
+
+            <a
+                class="card-link"
+                href="/artigos.html"
+            >
+                Ler artigos →
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
 
 </section>
 
@@ -257,77 +607,83 @@
 
 <footer class="site-footer">
 
-    <div class="container footer-grid">
 
-        <div>
+<div class="container footer-grid">
 
-            <div class="footer-brand">
-                SenhaLab
-            </div>
+    <div>
 
-            <p>
-                Ferramentas gratuitas para segurança digital.
-            </p>
-
+        <div class="footer-brand">
+            SenhaLab
         </div>
 
-        <div>
+        <p>
+            Ferramentas gratuitas para segurança digital.
+        </p>
 
-            <div class="footer-title">
-                Navegação
-            </div>
+    </div>
 
-            <div class="footer-links">
+    <div>
 
-                <a href="/">
-                    Início
-                </a>
-
-                <a href="/ferramentas.html">
-                    Ferramentas
-                </a>
-
-                <a href="/artigos.html">
-                    Artigos
-                </a>
-
-            </div>
-
+        <div class="footer-title">
+            Navegação
         </div>
 
-        <div>
+        <div class="footer-links">
 
-            <div class="footer-title">
-                Informações
-            </div>
+            <a href="/">
+                Início
+            </a>
 
-            <div class="footer-links">
+            <a href="/ferramentas.html">
+                Ferramentas
+            </a>
 
-                <a href="/privacidade.html">
-                    Privacidade
-                </a>
-
-                <a href="/termos.html">
-                    Termos
-                </a>
-
-                <a href="/contato.html">
-                    Contato
-                </a>
-
-            </div>
+            <a href="/artigos.html">
+                Artigos
+            </a>
 
         </div>
 
     </div>
 
-    <div class="container copyright">
-        © 2026 SenhaLab.
+    <div>
+
+        <div class="footer-title">
+            Informações
+        </div>
+
+        <div class="footer-links">
+
+            <a href="/privacidade.html">
+                Privacidade
+            </a>
+
+            <a href="/termos.html">
+                Termos
+            </a>
+
+            <a href="/contato.html">
+                Contato
+            </a>
+
+        </div>
+
     </div>
+
+</div>
+
+<div class="container copyright">
+    © 2026 SenhaLab.
+</div>
+
 
 </footer>
 
-<script src="/assets/js/gerador-senha.js?v=20261005"></script>
+<script src="/assets/js/menu.js?v=20261005"></script>
+<script
+    src="/assets/js/gerador-senha.js?v=20261005"
+></script>
 
 </body>
+
 </html>
