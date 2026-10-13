@@ -1,0 +1,55 @@
+<header class="site-header">
+    <div class="container header-inner">
+
+        <a
+            class="brand"
+            href="/"
+            aria-label="SenhaLab - Página inicial"
+        >
+            <span class="brand-mark">S</span>SenhaLab
+        </a>
+
+        <nav
+            class="nav"
+            aria-label="Navegação principal"
+        >
+            <a
+                class="{% if page.url == '/' %}active{% endif %}"
+                href="/"
+            >
+                Início
+            </a>
+
+            <a
+                class="{% if page.url == '/ferramentas.html' %}active{% endif %}"
+                href="/ferramentas.html"
+            >
+                Ferramentas
+            </a>
+
+            <a
+                class="{% if page.url == '/artigos.html' %}active{% endif %}"
+                href="/artigos.html"
+            >
+                Artigos
+            </a>
+
+            <a
+                class="{% if page.url == '/sobre.html' %}active{% endif %}"
+                href="/sobre.html"
+            >
+                Sobre
+            </a>
+        </nav>
+
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-label="Abrir menu"
+        >
+            ☰
+        </button>
+
+    </div>
+</header>

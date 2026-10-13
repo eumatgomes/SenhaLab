@@ -1,0 +1,25 @@
+{
+  "name": "senhalab",
+  "version": "1.0.0",
+  "description": "**Ferramentas gratuitas para segurança digital, simples, rápidas e feitas para funcionar diretamente no navegador.**",
+  "main": "index.js",
+"scripts": {
+  "build": "eleventy",
+  "start": "eleventy --serve"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eumatgomes/SenhaLab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/eumatgomes/SenhaLab/issues"
+  },
+  "homepage": "https://github.com/eumatgomes/SenhaLab#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  }
+}

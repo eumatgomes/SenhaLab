@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="robots" content="{{ robots or 'index,follow,max-image-preview:large' }}">
+    <meta name="theme-color" content="#2563eb">
+
+    <link rel="icon" type="image/png" href="/assets/images/S.png">
+
+    <title>{{ title or "SenhaLab" }}</title>
+
+    {% if description %}
+    <meta name="description" content="{{ description }}">
+    {% endif %}
+
+    {% if canonical %}
+    <link rel="canonical" href="{{ canonical }}">
+    {% endif %}
+
+    {% if ogTitle %}
+    <meta property="og:title" content="{{ ogTitle }}">
+    {% endif %}
+
+    {% if description %}
+    <meta property="og:description" content="{{ description }}">
+    {% endif %}
+
+    <meta property="og:type" content="{{ ogType or 'website' }}">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="SenhaLab">
+
+    {% if canonical %}
+    <meta property="og:url" content="{{ canonical }}">
+    {% endif %}
+
+    <meta property="og:image" content="https://senhalab.com.br/assets/images/S.png">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ ogTitle or title or 'SenhaLab' }}">
+
+    {% if description %}
+    <meta name="twitter:description" content="{{ description }}">
+    {% endif %}
+
+    <meta name="twitter:image" content="https://senhalab.com.br/assets/images/S.png">
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=20260929">
+
+    {% if structuredData %}
+    <script type="application/ld+json">{{ structuredData | safe }}</script>
+    {% endif %}
+</head>
+<body>
+
+    {% include "header.njk" %}
+
+    <main>
+        {{ content | safe }}
+    </main>
+
+    {% include "footer.njk" %}
+
+    <script src="/assets/js/menu.js?v=20261005" defer></script>
+
+    {% if scripts %}
+        {% for script in scripts %}
+        <script src="{{ script }}" defer></script>
+        {% endfor %}
+    {% endif %}
+
+</body>
+</html>
