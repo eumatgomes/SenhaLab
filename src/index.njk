@@ -1,17 +1,293 @@
 ---
+
 layout: layouts/base.njk
 title: "Gerador de Senhas Fortes e Aleatórias | SenhaLab"
 description: "Gere senhas fortes, aleatórias e seguras gratuitamente. Personalize o comprimento e os caracteres e crie sua senha diretamente no navegador, sem cadastro."
 canonical: "https://senhalab.com.br/"
 ogTitle: "Gerador de Senhas Fortes e Aleatórias | SenhaLab"
 ogType: "website"
-structuredData: '{"@context":"https://schema.org","@type":"WebSite","name":"SenhaLab","url":"https://senhalab.com.br/","description":"Ferramentas gratuitas para geração e análise de senhas e segurança digital.","inLanguage":"pt-BR"}'
+structuredData: '{"@context":"[https://schema.org","@type":"WebSite","name":"SenhaLab","url":"https://senhalab.com.br/","description":"Ferramentas](https://schema.org%22,%22@type%22:%22WebSite%22,%22name%22:%22SenhaLab%22,%22url%22:%22https://senhalab.com.br/%22,%22description%22:%22Ferramentas) gratuitas para geração e análise de senhas e segurança digital.","inLanguage":"pt-BR"}'
 scripts:
   - "/assets/js/gerador-senha.js?v=20261005"
+
 ---
 
-<!-- Conteúdo de teste temporário -->
-<section class="container">
-    <h1>Teste do Eleventy</h1>
-    <p>Se você está vendo esta página, o layout-base está funcionando.</p>
+<section class="hero">
+
+
+<div class="container hero-grid">
+
+    <div>
+        <span class="eyebrow">
+            Segurança digital
+        </span>
+
+        <h1>
+            Gere uma senha forte em segundos.
+        </h1>
+
+        <p class="lead">
+            Crie senhas aleatórias e personalizadas diretamente no navegador.
+            Sem cadastro e sem enviar sua senha para um servidor.
+        </p>
+
+        <div class="hero-actions">
+            <a class="btn btn-secondary" href="/ferramentas.html">
+                Ver outras ferramentas
+            </a>
+
+            <a class="btn btn-primary" href="#gerador">
+                Gerar agora
+            </a>
+        </div>
+    </div>
+
+    <div class="generator-card" id="gerador">
+
+        <div class="output-row">
+            <div
+                id="passwordOutput"
+                class="password-output"
+                aria-live="polite"
+                aria-label="Senha gerada"
+            ></div>
+
+            <button
+                id="copyPassword"
+                type="button"
+                class="btn btn-secondary copy-btn"
+            >
+                Copiar
+            </button>
+        </div>
+
+        <div class="strength">
+            <div class="strength-top">
+                <span>Força estimada</span>
+                <span id="strengthLabel">Muito forte</span>
+            </div>
+
+            <div class="strength-bar">
+                <div id="strengthFill" class="strength-fill"></div>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="field-label">
+                <span>Comprimento</span>
+                <span id="lengthValue">20</span>
+            </div>
+
+            <input
+                id="passwordLength"
+                type="range"
+                min="8"
+                max="128"
+                value="20"
+                aria-label="Comprimento da senha"
+            >
+        </div>
+
+        <div class="options">
+
+            <label class="check">
+                <input id="lowercase" type="checkbox" checked>
+                Minúsculas
+            </label>
+
+            <label class="check">
+                <input id="uppercase" type="checkbox" checked>
+                Maiúsculas
+            </label>
+
+            <label class="check">
+                <input id="numbers" type="checkbox" checked>
+                Números
+            </label>
+
+            <label class="check">
+                <input id="symbols" type="checkbox" checked>
+                Símbolos
+            </label>
+
+            <label class="check" style="grid-column:1/-1">
+                <input id="avoidAmbiguous" type="checkbox">
+                Evitar caracteres ambíguos
+            </label>
+
+        </div>
+
+        <button
+            id="generatePassword"
+            type="button"
+            class="btn btn-primary btn-generate"
+        >
+            Gerar nova senha
+        </button>
+
+        <p class="privacy-note">
+            Gerada localmente no navegador usando aleatoriedade
+            criptograficamente segura.
+        </p>
+
+    </div>
+
+</div>
+
+
+</section>
+
+<section class="trust">
+
+
+<div class="container trust-grid">
+
+    <div class="trust-item">
+        <strong>100% gratuito</strong>
+        <span>Sem cadastro</span>
+    </div>
+
+    <div class="trust-item">
+        <strong>Local</strong>
+        <span>No navegador</span>
+    </div>
+
+    <div class="trust-item">
+        <strong>8 a 128</strong>
+        <span>Caracteres</span>
+    </div>
+
+    <div class="trust-item">
+        <strong>Rápido</strong>
+        <span>Pronto em segundos</span>
+    </div>
+
+</div>
+
+
+</section>
+
+<section class="section">
+
+
+<div class="container">
+
+    <div class="section-header">
+        <span class="eyebrow">Por que usar?</span>
+
+        <h2>
+            Uma senha diferente para cada serviço
+        </h2>
+
+        <p class="lead">
+            Evite reutilizar senhas e prefira credenciais longas e aleatórias.
+        </p>
+    </div>
+
+    <div class="grid-3">
+
+        <div class="card">
+            <div class="icon">✓</div>
+
+            <h3>Aleatória</h3>
+
+            <p>
+                Evita padrões fáceis de adivinhar.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🔒</div>
+
+            <h3>Privacidade</h3>
+
+            <p>
+                A geração acontece no seu navegador.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">⚙</div>
+
+            <h3>Flexível</h3>
+
+            <p>
+                Escolha comprimento e tipos de caracteres.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+
+</section>
+
+<section class="section">
+
+
+<div class="container">
+
+    <div class="section-header">
+        <span class="eyebrow">Segurança digital</span>
+
+        <h2>
+            Mais ferramentas para proteger suas contas
+        </h2>
+
+        <p class="lead">
+            Além do gerador de senhas, o SenhaLab oferece ferramentas
+            gratuitas para analisar e verificar suas credenciais.
+        </p>
+    </div>
+
+    <div class="grid-3">
+
+        <div class="card">
+            <h3>Verificador de força</h3>
+
+            <p>
+                Analise características de uma senha diretamente no navegador.
+            </p>
+
+            <a
+                class="card-link"
+                href="/ferramentas/verificador-de-forca.html"
+            >
+                Verificar força →
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>Verificador de vazamentos</h3>
+
+            <p>
+                Consulte se uma senha apareceu em bases de credenciais comprometidas.
+            </p>
+
+            <a
+                class="card-link"
+                href="/ferramentas/verificador-de-vazamentos.html"
+            >
+                Verificar senha →
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>Aprenda sobre segurança</h3>
+
+            <p>
+                Confira artigos práticos sobre senhas, MFA e proteção de contas.
+            </p>
+
+            <a class="card-link" href="/artigos.html">
+                Ler artigos →
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+
 </section>
